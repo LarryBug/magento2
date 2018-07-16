@@ -1,0 +1,26 @@
+<h2>Hello Magento2</h2>
+<p>Congratulations ! You have created your first Magento Module !</p>
+<p>The block classname is : <?php echo get_class($block) ?></p>
+
+----
+<table width="800" border="1" cellspacing="0">
+    <tr>
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+        <th>Employee Address</th>
+        <th>Active Status</th>
+        <th>Creation Time</th>
+        <th>Modification Time</th>
+    </tr>
+    <?php foreach($block->getJobData() as $key=>$val) :?>
+        <tr>
+            <td><?php echo $val['e_id'];?></td>
+            <td><?php echo $val['e_name'];?></td>
+            <td><?php echo $val['e_address'];?></td>
+            <td><?php echo $val['is_active'];?></td>
+            <td><?php echo $val['created_at'];?></td>
+            <td><?php echo $val['update_time'];?></td>
+        </tr>
+    <?php endforeach;?>
+</table>
+

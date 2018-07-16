@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route id="test" frontName="test">
+            <module name="AAXIS_Larry" after="Magento_Core"/>
+        </route>
+    </router>
+</config>
+
+
+<!--
+<router>标签说明:
+
+id = standard 表示前端路由;
+<route>标签说明:
+
+id : 对于router的唯一标识名;
+frontName : 前端URL的控制名称;
+<router>标签说明：
+
+name : 声明module的名称;
+before : 表示在定义module之前加载;
+after : 表示在定义moduel之后加载;
+-->
